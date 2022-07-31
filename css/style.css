@@ -354,6 +354,10 @@ section>div{
 		z-index: 100;
 	}
 
+  img.border{
+    display:none;
+  }
+
 	#mainnav{
 		position: absolute;
 		top: 0;

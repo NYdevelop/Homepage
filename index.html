@@ -7,8 +7,10 @@
 <title>TOWA252's Works</title>
 <link rel="apple-touch-icon" href="logo.ico">
 <link rel="stylesheet" media="all" href="css/style.css">
+<link rel="stylesheet" media="all" href="css/slideshow.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="js/script.js"></script>
+<script src="js/slideshow.js"></script>
 </head>
 
 <body id="top">
@@ -22,7 +24,7 @@
 				<ul>
 					<li><a href="#top">TOP</a></li>
 					<li><a href="#sec01">PROFILE</a></li>
-					<li><a href="#sec02">PROJECT</a></li>
+					<li><a href="#sec02">WORKS</a></li>
 					<li><a href="#sec03">CONTACT</a></li>
 				</ul>
         <img src="images/borderBlack.png" class="border" />
@@ -41,15 +43,18 @@
 	<header>
 		<h2><span>Profile</span></h2>
 	</header>
-  <img src="images/face.png" alt="">
+  <img src="images/face.png" alt="profile icon">
  	<div>
       <p>
-ゲームメインではないですが、プログラム開発経験は長く（7年弱）プログラムの考え方など（オブジェクト指向、各種フレームワーク、開発体制など）については知見があると思っています。<br/>
-          業務では、ソフト開発以外に、通信ネットワーク/データベース/サーバ開発、企画提案、要件定義、ちっちゃいプロジェクトマネジメントなどなど…何でも屋させられているので、器用貧乏かもですがある程度は何でもできるかと思います。
+プログラム開発経験は長く（7年弱）プログラムの考え方など（オブジェクト指向、各種フレームワーク、開発体制など）については知見があると思っています。<br/>
+業務では、ソフト開発以外に、通信ネットワーク/データベース/サーバ開発、企画提案、要件定義、ちっちゃいプロジェクトマネジメントなどなど…何でも屋させられているので、器用貧乏かもですがある程度は何でもできるかと思います。
       </p>
 	</div>
   <div class="innerS">
-2017/04<br/>情報機器製造メーカー入社。ソフトウェア開発部門配属。<br/>C系言語を用いたGUI、IP通信ソフト開発に従事。<br/><br/>2020/04<br/>同社、研究開発部門転属。<br/>ドローン管制ソフト（映像デコード、操縦コマンド通信）開発や映像サーバ開発、画像判別AI開発に従事。
+2017/03<br/>大学院修士課程卒業。<br/>
+リアルタイムOSを用いたハードウェア制御や、処理高速化のためのGPU演算、GPUレンダリングなど広く浅く携わる。<br/><br/>
+2017/04<br/>情報機器製造メーカー入社。ソフトウェア開発部門配属。<br/>C系言語を用いたGUI、IP通信ソフト開発に従事。<br/><br/>
+2020/04<br/>同社、研究開発部門転属。<br/>ドローン管制ソフト（映像デコード表示、操縦コマンド通信）開発や映像サーバ開発、画像判別AI開発に従事。
   </div>
 </section>
 <!-- // PROFILE -->
@@ -57,13 +62,47 @@
 <!-- PROJECT -->
 <section id="sec02">
 	<header>
-		<h2><span>Project</span></h2>
+		<h2><span>Works</span></h2>
 	</header>
-	<ul id="gallery">
-		<li><img src="images/Project/1.jpg" width="426" height="418" alt=""></li>
-		<li><img src="images/Project/2.png" width="426" height="418" alt=""></li>
-		<li><img src="images/Project/3.png" width="426" height="418" alt=""></li>
-	</ul>
+  <div id="slide-show">
+  <div class="slider">
+    <div class="slides">
+      <div class="slides__img" id="" style="background-image: url('images/Project/2.png')">
+        <div class="slides__img__filter"></div>
+        <div class="slide__caption">
+          「汎用性・保守性の高いプログラムを作成するためにはどうしたらよいのか、という観点での設計アドバイスが欲しい」との依頼でした。<br/>基本的にはデザインパターンの説明を行い、他に委譲・継承の注意点の説明などを行いました。
+        </div>
+      </div>
+
+      <div class="slides__img" id="" style="background-image: url('images/Project/1.jpg')">
+        <div class="slides__img__filter"></div>
+        <div class="slide__caption">
+          ｢インスタグラムの特定タグ付き投稿を、ホームページ上に並べて配置して表示してほしい」との依頼でした。<br/>Javascriptベースで実装しました。
+        </div>
+      </div>
+
+      <div class="slides__img" id="" style="background-image: url('images/Project/3.png')">
+        <div class="slides__img__filter"></div>
+        <div class="slide__caption">
+            「2日間で簡単なゲームの製作および設計書を作成してほしい」との短納期案件でした。<br/>言語はpythonで、設計書約10ページを納めました。
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / slider -->
+
+  <!-- #Controls -->
+  <a class="control" id="prev"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M15.293 3.293 6.586 12l8.707 8.707 1.414-1.414L9.414 12l7.293-7.293-1.414-1.414z"/></svg></a>
+  <a class="control" id="next"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z"/></svg></a>
+
+  <!-- #Position dots -->
+  <div class="dots">
+    <span class="dots__single" id=""></span>
+    <span class="dots__single" id=""></span>
+    <span class="dots__single" id=""></span>
+  </div>
+
+</div>
 </section>
 <!-- // PROJECT -->
 
@@ -73,7 +112,8 @@
 		<h2><span>Contact</span></h2>
 	</header>
   <div>
-    <a href="mailto:gt.srai@gmail.com">Mail</a>
+      <p>ご依頼も受け付けていますので、ご気軽に連絡ください。</p>
+      <p><a href="mailto:gt.srai@gmail.com">Mail</a></p>
   <div>
 </section>
 <!-- // CONTACT -->
