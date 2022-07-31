@@ -5,7 +5,7 @@
 #slide-show {
   position: relative;
   font-size: 16px;
-  height: 765px;
+  height: 75vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
