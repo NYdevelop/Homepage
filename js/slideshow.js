@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  var selectIndex = 0;
+  const maximumIndex = $(".slides__img").length - 1;
   // id generator
   function idGenerator() {
     $(".slides__img").each(function(index, el) {
@@ -11,10 +13,30 @@ $(document).ready(function() {
 
   // id extractor
   // at the end it focuses the current dot
-  function dotsFocus() {
+  function dotsFocus(t) {
     $("[id^='dot_']").removeClass("dots__current");
-    var id = $(".slides__img:eq(1)").attr("id");
-    var n = Number(id.substr(-1));
+
+    if (t==="prev")
+    {
+      selectIndex--;
+      if (selectIndex < 0)
+      {
+        selectIndex = maximumIndex;
+      }
+    }
+    else if (t==="next")
+    {
+      selectIndex++;
+      if (selectIndex > maximumIndex)
+      {
+        selectIndex = 0;
+      }
+    }
+    else
+    {
+      selectIndex = Number(t);
+    }
+    var n = selectIndex;
     if (n === 0) {
       n = $(".slides__img").length;
     }
@@ -31,8 +53,7 @@ $(document).ready(function() {
       },
       {
         duration: d,
-        easing: e,
-        complete: dotsFocus()
+        easing: e
       }
     );
   }
@@ -67,6 +88,7 @@ $(document).ready(function() {
 
   // slide images
   function slideIt(l, d, e, t) {
+    dotsFocus(t);
     var $slides = $(".slides");
     captionSlideDown(150, "linear");
     $slides.animate(
@@ -153,4 +175,5 @@ $(document).ready(function() {
   idGenerator();
   captionSlideUp(1700, "swing");
   slideShow(800, "swing");
+  dotsFocus("0");
 });

@@ -47,7 +47,8 @@ img.border{
 }
 
 #header h1{
-	padding-top: 60px;
+	padding-top: 30px;
+	margin: 0 auto 30px;
 }
 
 
@@ -146,19 +147,19 @@ section>div{
 
 
 
-/* SEC02 Project
+/* SEC02 Works
 ------------------------------------------------------------*/
-#gallery li{
-	float: left;
-	width: calc(100%/3);
-	line-height: 0;
+#sec02 div{
+  margin: 0 auto;
 }
 
-#gallery img{
-	width: 100%;
-	/* height: auto; */
-  object-fit:cover;
+
+#sec02 div:last-child p
+{
+  margin-bottom: 10px;
 }
+
+
 
 
 /* SEC03 Contact
@@ -166,7 +167,7 @@ section>div{
 #sec03 div{
   text-align: center;
 }
-#sec03 a{
+#sec03 strong{
   font-size: large;
 }
 
@@ -203,7 +204,7 @@ section>div{
 	}
 	
 	
-	/* SEC03 PROJECT
+	/* SEC03 Contact
 	-----------------*/
 	.col3{
 		text-align: center;
@@ -359,9 +360,9 @@ section>div{
 		z-index: 100;
 	}
 
-  img.border{
-    display:none;
-  }
+	img.border{
+		display:none;
+  	}
 
 	#mainnav{
 		position: absolute;

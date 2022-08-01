@@ -26,9 +26,6 @@
 
 /* #Captions */
 #slide-show .slide__caption {width: 100%; text-align: center; color: #fff; position: absolute; bottom: 5%; z-index: 20; opacity: 0}
-#slide-show .slide__caption__title {font-size: 3em; line-height: 1.05em;}
-#slide-show .slide__caption__subtitle {font-size: 2.25em; line-height: 1.25em;}
-#slide-show .slide__caption__text {font-size: 1.75em; line-height: 1.25em;}
 
 /* #Controls */
 #slide-show .control {
@@ -51,9 +48,9 @@
 
 /* #Indicators */
 #slide-show .dots {width: 100%; position: absolute; z-index: 20; bottom: 2%; text-align: center;}
-#slide-show .dots__single {cursor: pointer; display: inline-block; width: 20px; height: 6px; background-color: #fff; opacity: 0.5; margin: 0 5px;}
+#slide-show .dots__single {cursor: pointer; display: inline-block; width: 10px; height: 10px; background-color: #fff; opacity: 0.5; margin: 0 5px; border-radius:50%;}
 .dots__single:hover,
-#slide-show .dots__current {opacity: 1;}
+#slide-show .dots__current {opacity: 1; background-color: #000;}
 
 
 
